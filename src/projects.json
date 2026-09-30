@@ -1,0 +1,414 @@
+[
+  {
+    "id": "projeto-1",
+    "name": "HUB NTT — Plataforma Operacional com IA",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Plataforma interna criada para concentrar dashboards, Data Lake, monitoramento de infraestrutura, RAG, Zabbix e operacao omnichannel em um unico ambiente. O projeto integra WhatsApp, Outlook, MySQL, Supabase e camadas de IA para acelerar leitura operacional, consolidar protocolos e dar suporte a decisoes em tempo real.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "MySQL",
+      "Zabbix",
+      "OpenAI",
+      "Groq",
+      "Pinecone"
+    ],
+    "context": "Plataforma interna de telecom para reunir dashboards, dados, monitoramento e atendimento em um único ambiente.",
+    "problem": "Informações distribuídas entre sistemas dificultam a leitura conjunta da operação. Validar com o responsável o gargalo original e seu impacto.",
+    "approach": "Concentrar dashboards e Data Lake, integrar protocolos e fontes operacionais e oferecer consulta com IA sobre o contexto da operação.",
+    "result": "Entrega descrita: hub com integrações de WhatsApp, Outlook, MySQL, Supabase e monitoramento Zabbix. Adoção, disponibilidade e ganho operacional a documentar.",
+    "investment": "R$ 100 mil",
+    "investmentReason": "Referência para uma nova operação integrada em fases, com múltiplas fontes, permissões, observabilidade e transferência de conhecimento. Integrações e controles adicionais dependem do diagnóstico.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ],
+    "title": "Uma operação conectada. Uma decisão com contexto.",
+    "signal": "Integração operacional",
+    "measure": "Tempo para reunir contexto; adoção por equipe; qualidade e atualização dos dados.",
+    "flow": [
+      "Fontes operacionais",
+      "Contexto compartilhado",
+      "Decisão e ação"
+    ]
+  },
+  {
+    "id": "projeto-2",
+    "name": "Nexus AI CRM",
+    "category": "ENGENHARIA DE PRODUTO",
+    "description": "CRM completo para consultoria de IA com agente NEXUS contextual por perfil (Dono, Operador, Cliente). Dashboards KPI, Kanban drag-and-drop, BI interativo e gestão de clientes/projetos.",
+    "technologies": [
+      "HTML/CSS/JS",
+      "AI Agent",
+      "Chart.js",
+      "localStorage"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "CRM completo para consultoria de IA com agente NEXUS contextual por perfil (Dono, Operador, Cliente). Dashboards KPI, Kanban drag-and-drop, BI interativo e gestão de clientes/projetos.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-3",
+    "name": "KPI NOC Dashboard",
+    "category": "DADOS & BI",
+    "description": "Dashboard operacional completo para Centro de Operações de Rede (NOC). ETL automatizado via Python + MySQL, atualização agendada e indicadores de SLA, rechamados, CSAT e churn em Power BI.",
+    "technologies": [
+      "Power BI",
+      "Python",
+      "MySQL",
+      "DAX",
+      "ODBC"
+    ],
+    "context": "Centro de Operações de Rede com acompanhamento de SLA, rechamados, CSAT e churn.",
+    "problem": "A leitura dos indicadores depende de fontes e regras consistentes. Confirmar como a equipe consolidava a informação antes do projeto.",
+    "approach": "Preparar os dados com Python e MySQL, agendar a atualização e apresentar os indicadores no Power BI com regras de cálculo em DAX.",
+    "result": "Entrega descrita: dashboard de NOC com ETL e atualização agendada. Tempo de preparação, frequência de uso e decisões apoiadas a comprovar.",
+    "investment": "R$ 20 mil",
+    "investmentReason": "Referência para um novo painel de gestão com pipeline, definições de indicadores, validação com usuários e treinamento. Complexidade das fontes pode alterar o enquadramento.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ],
+    "title": "Indicadores que entram na rotina da gestão.",
+    "signal": "Inteligência de gestão",
+    "measure": "Tempo de preparação; consistência dos indicadores; uso em reuniões de gestão.",
+    "flow": [
+      "Dados validados",
+      "Indicadores definidos",
+      "Rotina de gestão"
+    ]
+  },
+  {
+    "id": "projeto-4",
+    "name": "Churn Prediction System",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Sistema de predição de churn com scoring de risco por cliente. Modelo ML com features calibradas em dados históricos, lista de prioridade de retenção e dashboard Power BI integrado.",
+    "technologies": [
+      "Python",
+      "Scikit-learn",
+      "Pandas",
+      "Power BI"
+    ],
+    "context": "Projeto de scoring de risco por cliente a partir de histórico, com uma lista de prioridade e visualização em Power BI.",
+    "problem": "Priorizar a retenção exige sinais confiáveis e uma rotina de ação. Documentar o processo anterior e o custo do problema.",
+    "approach": "Preparar o histórico, desenvolver o modelo com Python e Scikit-learn e conectar o scoring à priorização de clientes e ao dashboard.",
+    "result": "Entrega descrita: modelo de risco e fila de priorização. Não há redução de churn, desempenho preditivo ou receita preservada comprovados neste material.",
+    "investment": "R$ 50 mil",
+    "investmentReason": "Referência para um novo piloto de retenção que inclua qualidade de dados, validação temporal, integração à rotina e acompanhamento das ações. Escala de produção é um escopo adicional.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ],
+    "title": "Do risco de cancelamento à prioridade de retenção.",
+    "signal": "IA aplicada à retenção",
+    "measure": "Calibração e desempenho em dados futuros; adesão às ações; retenção acompanhada com comparação válida.",
+    "flow": [
+      "Histórico de clientes",
+      "Sinais de risco",
+      "Ação de retenção"
+    ]
+  },
+  {
+    "id": "projeto-5",
+    "name": "JARVIS — Assistente IA",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Assistente pessoal com IA via WhatsApp. Processa áudio (Whisper), visão (OCR), gerencia finanças pessoais, registra transações automaticamente e responde em linguagem natural via OpenAI.",
+    "technologies": [
+      "n8n",
+      "OpenAI",
+      "WhatsApp",
+      "PostgreSQL",
+      "Whisper"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Assistente pessoal com IA via WhatsApp. Processa áudio (Whisper), visão (OCR), gerencia finanças pessoais, registra transações automaticamente e responde em linguagem natural via OpenAI.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-6",
+    "name": "ESCALA APP",
+    "category": "ENGENHARIA DE PRODUTO",
+    "description": "Aplicativo web de gestão de escala de funcionários. Calcula automaticamente horas extras, plantões, turnos e horas trabalhadas. Interface interativa com calendário visual e exportação de relatórios.",
+    "technologies": [
+      "HTML/CSS/JS",
+      "Python",
+      "Cálculo de Horas"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Aplicativo web de gestão de escala de funcionários. Calcula automaticamente horas extras, plantões, turnos e horas trabalhadas. Interface interativa com calendário visual e exportação de relatórios.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-7",
+    "name": "FitAI Pro (NutriSnap)",
+    "category": "ENGENHARIA DE PRODUTO",
+    "description": "Aplicativo de nutrição com coach de IA. Chat inteligente com contexto do perfil do usuário, análise de fotos de refeições, contagem calórica e recomendações personalizadas via OpenAI.",
+    "technologies": [
+      "React",
+      "Firebase",
+      "OpenAI",
+      "n8n"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Aplicativo de nutrição com coach de IA. Chat inteligente com contexto do perfil do usuário, análise de fotos de refeições, contagem calórica e recomendações personalizadas via OpenAI.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-8",
+    "name": "Pipeline ETL / DataLake",
+    "category": "DADOS & ENGENHARIA",
+    "description": "Pipeline ETL completo migrando dados de CSVs/Excel para DataLake MySQL. Normalização, agendamento via Task Scheduler, integração ODBC com Power BI para refresh server-side.",
+    "technologies": [
+      "Python",
+      "MySQL",
+      "ODBC",
+      "Power BI",
+      "TMDL"
+    ],
+    "context": "Pipeline que leva CSVs e planilhas Excel para um Data Lake MySQL, conectado ao Power BI.",
+    "problem": "Análises dependem da organização e atualização dos arquivos de origem. Confirmar esforço manual, falhas e recorrência no cenário inicial.",
+    "approach": "Normalizar os dados em Python, carregar no MySQL, agendar a execução e conectar a base ao Power BI por ODBC.",
+    "result": "Entrega descrita: pipeline de dados normalizados com agendamento e conexão ao BI. Volume processado, taxa de falhas e horas recuperadas a medir.",
+    "investment": "R$ 10 mil",
+    "investmentReason": "Referência para um novo processo delimitado, com fontes acessíveis, normalização, agendamento e documentação. Não pressupõe um Data Lake corporativo completo.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ],
+    "title": "Uma base confiável antes do próximo dashboard.",
+    "signal": "Fundação de dados",
+    "measure": "Tempo de preparação; falhas de execução; atualidade e consistência da base.",
+    "flow": [
+      "Arquivos de origem",
+      "Base normalizada",
+      "Análise atualizada"
+    ]
+  },
+  {
+    "id": "projeto-9",
+    "name": "Mapa de Rompimentos",
+    "category": "DADOS & BI",
+    "description": "Dashboard georreferenciado para monitoramento de rompimentos de fibra óptica em tempo real. Mapa interativo com heat map de incidências, SLA por região e alertas automáticos.",
+    "technologies": [
+      "Power BI",
+      "GIS / Mapa",
+      "Python",
+      "DAX"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Dashboard georreferenciado para monitoramento de rompimentos de fibra óptica em tempo real. Mapa interativo com heat map de incidências, SLA por região e alertas automáticos.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-10",
+    "name": "NutriSnap — Monitor Nutricional IA",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "App mobile de monitoramento nutricional com IA. Tira foto do prato e a IA identifica todos os alimentos, calcula macronutrientes automaticamente, compara com a dieta do nutricionista e dá score de aderência com sugestões personalizadas.",
+    "technologies": [
+      "React Native",
+      "OpenAI Vision",
+      "Supabase",
+      "n8n"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "App mobile de monitoramento nutricional com IA. Tira foto do prato e a IA identifica todos os alimentos, calcula macronutrientes automaticamente, compara com a dieta do nutricionista e dá score de aderência com sugestões personalizadas.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-11",
+    "name": "CRM Limpa Nome",
+    "category": "ENGENHARIA DE PRODUTO",
+    "description": "CRM completo para escritórios de regularização de crédito. Gerencia todo o ciclo: captação de leads via Google Forms, negativações BACEN, processos judiciais com liminar, pipeline de vendas, documentos PDF e dashboard com KPIs da operação.",
+    "technologies": [
+      "Next.js",
+      "Supabase",
+      "Vercel",
+      "REST API",
+      "Google Forms"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "CRM completo para escritórios de regularização de crédito. Gerencia todo o ciclo: captação de leads via Google Forms, negativações BACEN, processos judiciais com liminar, pipeline de vendas, documentos PDF e dashboard com KPIs da operação.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-12",
+    "name": "GranaBot Finance Web",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Plataforma web de controle financeiro pessoal integrada ao GranaBot via WhatsApp. Backend Node.js/NestJS com Prisma ORM + PostgreSQL, webhook n8n para processar mensagens e frontend com dashboard de gastos, metas e relatórios.",
+    "technologies": [
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "n8n",
+      "Docker"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Plataforma web de controle financeiro pessoal integrada ao GranaBot via WhatsApp. Backend Node.js/NestJS com Prisma ORM + PostgreSQL, webhook n8n para processar mensagens e frontend com dashboard de gastos, metas e relatórios.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-13",
+    "name": "Agentes IA — LangChain & CrewAI",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Sistema de agentes de IA autônomos e colaborativos usando LangChain e CrewAI. Arquitetura multi-agente com papéis especializados, memória persistente, RAG sobre bases de conhecimento customizadas e orquestração de tarefas complexas via LangGraph.",
+    "technologies": [
+      "LangChain",
+      "CrewAI",
+      "LangGraph",
+      "Python",
+      "RAG",
+      "OpenAI"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Sistema de agentes de IA autônomos e colaborativos usando LangChain e CrewAI. Arquitetura multi-agente com papéis especializados, memória persistente, RAG sobre bases de conhecimento customizadas e orquestração de tarefas complexas via LangGraph.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "projeto-14",
+    "name": "TelecomAgent — IA para ISPs",
+    "category": "IA & AUTOMAÇÃO",
+    "description": "Agente IA multi-agente autônomo para troubleshooting de redes FTTH/GPON. Analisa logs de erro (OLT, ONU, BGP, OSPF) com 4 agentes especializados (Analyzer, RAG Expert, Troubleshooter, Validator), RAG com manuais Huawei/Cisco e mapa de calor de falhas.",
+    "technologies": [
+      "Python",
+      "CrewAI",
+      "LangChain",
+      "ChromaDB",
+      "Streamlit",
+      "Ollama"
+    ],
+    "context": "A completar: segmento, período, cenário inicial e envolvidos.",
+    "problem": "A completar: gargalo observado e decisão que o projeto precisava apoiar.",
+    "approach": "Agente IA multi-agente autônomo para troubleshooting de redes FTTH/GPON. Analisa logs de erro (OLT, ONU, BGP, OSPF) com 4 agentes especializados (Analyzer, RAG Expert, Troubleshooter, Validator), RAG com manuais Huawei/Cisco e mapa de calor de falhas.",
+    "result": "Entrega descrita no portfólio; impacto no negócio ainda sem evidência documentada neste material.",
+    "investment": null,
+    "investmentReason": "A completar após definir escopo, integrações, riscos e critérios de aceite.",
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  },
+  {
+    "id": "postei",
+    "name": "Postei — Plataforma de conteúdo",
+    "title": "Da criação isolada a uma esteira de conteúdo.",
+    "category": "ENGENHARIA DE PRODUTO",
+    "description": "Produto próprio para conectar posicionamento, criação, mídia e integrações de distribuição.",
+    "context": "Produto próprio voltado à organização da criação e distribuição de conteúdo.",
+    "problem": "Uma esteira de conteúdo exige coerência entre posicionamento, produção, revisão e distribuição. Validar o cenário original e o público atendido.",
+    "approach": "Construir aplicação e APIs para geração de conteúdo, renderização visual e integrações de distribuição e pagamentos.",
+    "result": "Entrega descrita no portfólio: plataforma Postei, com aplicação, renderização e integrações. Maturidade, usuários ativos e impacto na produção a documentar.",
+    "technologies": [
+      "Next.js",
+      "Node.js",
+      "IA generativa",
+      "Satori"
+    ],
+    "investment": "R$ 50 mil",
+    "investmentReason": "Referência para um novo produto com fluxo principal, integrações delimitadas, revisão humana e critérios de aceite. Infraestrutura, uso de APIs e evolução recorrente são dimensionados separadamente.",
+    "signal": "Automação e produto",
+    "measure": "Tempo por conteúdo aprovado; consistência editorial; funcionamento das integrações.",
+    "flow": [
+      "Direção editorial",
+      "Criação e revisão",
+      "Distribuição"
+    ],
+    "pending": [
+      "Estágio: produção, piloto ou desenvolvimento",
+      "Papel de Alan e participação de outros profissionais",
+      "Evidência da entrega e autorização para divulgação",
+      "Resultado, período, base de comparação e método de medição"
+    ]
+  }
+]

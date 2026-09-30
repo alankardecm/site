@@ -1,56 +1,54 @@
-import React from "react";
-import { BarChart3, LayoutDashboard, Zap, Workflow } from "lucide-react";
+import React, { useState } from 'react';
+import { ArrowUpRight, ArrowRight, Check, Plus, Layers, Database, Activity, Network } from 'lucide-react';
+import projects from './projects.json';
 
-export default function Home() {
-  return (
-    <div className="bg-white text-gray-800 font-sans">
-      {/* Hero com gradiente */}
-      <section className="bg-gradient-to-br from-[#1B3B5F] to-[#2D9C79] text-white py-20 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl font-bold mb-4">Decisões melhores começam com dados claros</h1>
-          <p className="text-xl mb-6">Consultoria especializada em Power BI, Dashboards e Estratégia de Dados para Pequenas Empresas, ISPs e Startups.</p>
-          <a href="https://wa.me/5519996309592" target="_blank" className="bg-white text-[#1B3B5F] px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition">Fale com um especialista</a>
-        </div>
-      </section>
-
-      {/* Serviços com ícones */}
-      <section className="py-16 px-6 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center mb-12">Soluções Inteligentes</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="p-6 bg-white shadow rounded-xl text-center">
-            <BarChart3 className="w-10 h-10 mx-auto text-[#1B3B5F]" />
-            <h3 className="text-xl font-semibold mt-4">Dashboards com Power BI</h3>
-            <p className="text-gray-600 mt-2">Visualizações interativas que transformam dados em decisões.</p>
-          </div>
-          <div className="p-6 bg-white shadow rounded-xl text-center">
-            <Workflow className="w-10 h-10 mx-auto text-[#1B3B5F]" />
-            <h3 className="text-xl font-semibold mt-4">ETL Automatizado</h3>
-            <p className="text-gray-600 mt-2">Extração, transformação e carga otimizadas de dados.</p>
-          </div>
-          <div className="p-6 bg-white shadow rounded-xl text-center">
-            <LayoutDashboard className="w-10 h-10 mx-auto text-[#1B3B5F]" />
-            <h3 className="text-xl font-semibold mt-4">Dashboards Personalizados</h3>
-            <p className="text-gray-600 mt-2">Indicadores de desempenho sob medida para o seu negócio.</p>
-          </div>
-          <div className="p-6 bg-white shadow rounded-xl text-center">
-            <Zap className="w-10 h-10 mx-auto text-[#1B3B5F]" />
-            <h3 className="text-xl font-semibold mt-4">Estratégia de Dados</h3>
-            <p className="text-gray-600 mt-2">Planejamento orientado por dados com foco em resultados.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contato */}
-      <section className="bg-[#1B3B5F] text-white py-16 text-center">
-        <h2 className="text-3xl font-bold mb-4">Vamos conversar?</h2>
-        <p className="mb-6">Entre em contato agora mesmo e veja como a inteligência de dados pode transformar sua empresa.</p>
-        <a href="https://wa.me/5519996309592" target="_blank" className="bg-[#2D9C79] px-6 py-3 rounded-xl font-semibold hover:bg-[#27a377] transition">Chamar no WhatsApp</a>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center py-6 text-sm text-gray-500">
-        © {new Date().getFullYear()} AM Consultoria. Todos os direitos reservados.
-      </footer>
+const levels = [
+  { value: 'R$ 10 mil', title: 'Resolver um gargalo', scope: 'Uma fonte de fricção bem definida. Um processo com começo, fim e responsável.', deliverables: ['Diagnóstico do processo prioritário', 'Pipeline ou automação delimitada', 'Validação e documentação da entrega'], acceptance: 'Execução validada com entradas e saídas acordadas.', condition: 'Fontes acessíveis, regras conhecidas e poucas dependências.', reason: 'Tirar uma rotina crítica da dependência de execução manual.' },
+  { value: 'R$ 20 mil', title: 'Dar clareza à gestão', scope: 'Conectar a base de dados a uma rotina de decisão, com indicadores que a equipe entende.', deliverables: ['Pipeline e painel de gestão', 'Definições e validação dos indicadores', 'Treinamento e passagem para a operação'], acceptance: 'Indicadores reconciliados com a fonte e aprovados pelos usuários.', condition: 'Escopo de dados delimitado e participação do gestor na validação.', reason: 'Construir confiança no dado e transformar análise em rotina.' },
+  { value: 'R$ 50 mil', title: 'Integrar decisão e ação', scope: 'Um fluxo completo entre dados, inteligência e execução, com validação em etapas.', deliverables: ['Arquitetura e integrações do fluxo', 'Piloto de IA, retenção ou produto', 'Medição, revisão humana e acompanhamento'], acceptance: 'Fluxo validado de ponta a ponta e piloto avaliado com critérios definidos.', condition: 'Qualidade da base, APIs disponíveis e equipe responsável pela ação.', reason: 'Orquestrar dependências e testar valor no processo real.' },
+  { value: 'R$ 100 mil', title: 'Estruturar a operação', scope: 'Um programa por fases para conectar áreas, sistemas e responsabilidades.', deliverables: ['Roadmap e arquitetura integrada', 'Múltiplos fluxos com acessos e monitoramento', 'Implantação por marcos e transferência de conhecimento'], acceptance: 'Marcos aceitos, operação monitorada e responsáveis preparados.', condition: 'Patrocínio executivo, acesso às fontes e governança compartilhada.', reason: 'Sustentar continuidade e adoção em uma operação com maior complexidade.' },
+];
+const selectedIds = ['projeto-1', 'projeto-3', 'projeto-4', 'projeto-8', 'postei'];
+const featured = selectedIds.map(id => projects.find(p => p.id === id));
+const categories = ['Todos', 'DADOS & BI', 'IA & AUTOMAÇÃO', 'ENGENHARIA DE PRODUTO'];
+const whatsapp = (message) => `https://wa.me/5519995483158?text=${encodeURIComponent(message)}`;
+function ContactLink({ children, message, className = 'button primary' }) {
+  return <a className={className} href={whatsapp(message || 'Olá Alan, quero conversar sobre o contexto da minha operação e avaliar um projeto.')} target="_blank" rel="noopener noreferrer">{children}<ArrowUpRight size={18} aria-hidden="true" /></a>;
+}
+function Case({ project, index }) {
+  return <article className="case" id={project.id}>
+    <div className="case-visual">
+      <div className="visual-top"><span>AM / {project.signal}</span><span>0{index + 1}</span></div>
+      <div className="visual-center"><div className="visual-icon">{index === 0 ? <Network /> : index === 1 ? <Activity /> : <Database />}</div><p>{project.title}</p></div>
+      <ol className="flow">{project.flow.map((step, i) => <li key={step}><span>0{i+1}</span>{step}</li>)}</ol>
+      <span className="visual-caption">Esquema conceitual · não representa uma tela de cliente</span>
     </div>
-  );
+    <div className="case-content">
+      <div className="case-meta"><span className="eyebrow">{project.signal}</span><span className="status">Estágio a confirmar</span></div>
+      <h3>{project.name}</h3>
+      <dl className="story"><div><dt>Contexto</dt><dd>{project.context}</dd></div><div><dt>Problema</dt><dd>{project.problem}</dd></div><div><dt>Abordagem</dt><dd>{project.approach}</dd></div><div className="result"><dt>Resultado documentado</dt><dd>{project.result}</dd></div></dl>
+      <div className="investment"><span>Investimento percebido para escopo semelhante</span><strong>{project.investment}</strong><p>{project.investmentReason}</p></div>
+      <details className="evidence"><summary>Evidências e campos para completar <Plus size={16} aria-hidden="true" /></summary><div className="evidence-body"><p><strong>O que medir:</strong> {project.measure}</p><ul>{project.pending.map(field => <li key={field}><span>A completar</span> {field}</li>)}</ul><p><strong>Resultado mensurável:</strong> [antes] → [depois], no período [ ], com fonte [ ] e método [ ].</p><p><strong>Limites:</strong> [restrições, fatores externos e responsabilidades do cliente].</p><div className="tags">{project.technologies.map(t => <span key={t}>{t}</span>)}</div></div></details>
+      <ContactLink className="text-link" message={`Olá Alan, quero entender como a abordagem do ${project.name} se aplica à minha operação.`}>Discutir um desafio semelhante</ContactLink>
+    </div>
+  </article>;
+}
+export default function Home() {
+  const [level, setLevel] = useState(1);
+  const [filter, setFilter] = useState('Todos');
+  const selectedLevel = levels[level];
+  const archive = projects.filter(p => p.id !== 'postei').filter(p => filter === 'Todos' || (filter === 'DADOS & BI' ? /DADOS|BI/.test(p.category) : p.category === filter));
+  return <>
+    <a href="#conteudo" className="skip-link">Ir para o conteúdo</a>
+    <header className="header"><div className="wrap nav"><a className="brand" href="#inicio" aria-label="AM Consultoria — início">AM<span>CONSULTORIA<small>ALAN MOREIRA</small></span></a><nav aria-label="Navegação principal"><a href="#casos">Casos</a><a href="#investimento">Investimento</a><a href="#repertorio">Repertório</a></nav><ContactLink className="nav-contact">Vamos conversar</ContactLink></div></header>
+    <main id="conteudo">
+      <section className="hero" id="inicio"><div className="wrap hero-grid"><div className="hero-copy"><p className="eyebrow">Dados. Engenharia. Inteligência aplicada.</p><h1>O próximo avanço<br/>da sua operação<br/>começa com <em>clareza.</em></h1><p className="hero-description">Conecto dados, sistemas e processos para transformar um problema de negócio em uma solução que a equipe consegue usar.</p><div className="hero-actions"><a href="#casos" className="button primary">Explorar os casos <ArrowRight size={18} aria-hidden="true" /></a><ContactLink className="text-link">Conversar com Alan</ContactLink></div><div className="founder-line"><span className="monogram">AM</span><p><strong>Alan Moreira</strong><span>Fundador da AM Consultoria · estratégia e implementação</span></p></div></div><aside className="hero-panel" aria-label="Abordagem de trabalho"><div className="panel-top"><span>DA COMPLEXIDADE À AÇÃO</span><Layers size={20} /></div><div className="orbit" aria-hidden="true"><div className="orbit-ring ring-two"></div><div className="orbit-ring"></div><span className="orbit-core">AM</span><span className="orbit-label label-data">DADOS</span><span className="orbit-label label-process">PROCESSOS</span><span className="orbit-label label-people">PESSOAS</span><span className="orbit-label label-ai">IA</span></div><h2>A tecnologia precisa<br/>fazer sentido no negócio.</h2><p>Diagnosticar o gargalo. Conectar o fluxo. Validar a entrega. Acompanhar o uso.</p><span className="panel-foot">PORTFÓLIO COMERCIAL / 2026</span></aside></div></section>
+      <div className="principles"><div className="wrap"><span>Decisões com contexto</span><span>Fluxos com responsáveis</span><span>Entregas com critérios de aceite</span><span>Valor com evidência</span></div></div>
+      <section className="section wrap" id="casos"><div className="section-heading"><div><p className="eyebrow">01 / Casos selecionados</p><h2>O problema vem primeiro.<br/><em>A solução precisa responder.</em></h2></div><p>Integração operacional, inteligência de gestão e automação. Um repertório de projetos para discutir desafios concretos.</p></div><div className="editorial-note"><Check size={18} aria-hidden="true" /><p>As entregas abaixo estão descritas no portfólio existente. Resultados de negócio, participação de Alan e estágio de implantação têm campos de validação. Os valores orientam novos escopos; não são preços históricos nem promessa de retorno.</p></div>{featured.map((p, i) => <Case project={p} index={i} key={p.id} />)}</section>
+      <section className="investment-section" id="investimento"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">02 / Escopo e investimento</p><h2>O valor acompanha<br/><em>a responsabilidade da entrega.</em></h2></div><p>De um processo delimitado a uma operação integrada. A diferença está nas dependências, na validação e na continuidade.</p></div><div className="level-tabs" role="tablist" aria-label="Referências de investimento">{levels.map((l, i) => <button key={l.value} id={`level-${i}`} role="tab" aria-selected={level === i} aria-controls={`panel-${i}`} tabIndex={level === i ? 0 : -1} onClick={() => setLevel(i)} onKeyDown={e => { let next; if (e.key === 'ArrowRight') next = (i+1)%4; if (e.key === 'ArrowLeft') next = (i+3)%4; if (e.key === 'Home') next=0; if (e.key === 'End') next=3; if(next !== undefined) {e.preventDefault(); setLevel(next); document.getElementById(`level-${next}`).focus();} }}><span>{l.value}</span><small>{l.title}</small></button>)}</div><div className="level-panel" id={`panel-${level}`} role="tabpanel" aria-labelledby={`level-${level}`}><div><span className="eyebrow">Referência de proposta · escopo a validar</span><h3>{selectedLevel.title}</h3><p>{selectedLevel.scope}</p><div className="value-reason"><span>Por que esse escopo tem valor</span><p>{selectedLevel.reason}</p></div><ContactLink className="button light" message={`Olá Alan, quero avaliar um projeto na referência de ${selectedLevel.value}: ${selectedLevel.title}. Meu desafio é: `}>Avaliar este escopo</ContactLink></div><div className="level-deliverables"><h4>O que a proposta deve incluir</h4><ul>{selectedLevel.deliverables.map(d=><li key={d}><Check size={17} aria-hidden="true" />{d}</li>)}</ul><dl><div><dt>Critério de aceite</dt><dd>{selectedLevel.acceptance}</dd></div><div><dt>Premissas</dt><dd>{selectedLevel.condition}</dd></div></dl></div></div><p className="investment-note">Referências comerciais, sujeitas a diagnóstico, prazo e escopo. Licenças, nuvem, consumo de APIs, manutenção e suporte recorrente precisam constar separadamente na proposta. Não há estimativa de ROI sem uma base de comparação validada.</p></div></section>
+      <section className="section wrap method"><div className="section-heading"><div><p className="eyebrow">03 / Como o trabalho avança</p><h2>Clareza antes de construir.<br/><em>Critérios antes de entregar.</em></h2></div><p>Cada proposta deve definir entregas, responsáveis, dependências, prazo e investimento. O avanço depende da validação de cada etapa.</p></div><div className="method-grid">{[['01','Entender','Mapear o processo, as fontes e a decisão que precisa melhorar. Registrar a situação inicial.'],['02','Desenhar','Definir o escopo, as integrações, os riscos e os critérios de aceite com os responsáveis.'],['03','Implementar','Construir por etapas, validar com usuários e documentar a operação da solução.'],['04','Acompanhar','Comparar com a situação inicial, observar adoção e decidir os próximos passos.']].map(([n,t,p])=><div key={n}><span>{n}</span><h3>{t}</h3><p>{p}</p></div>)}</div></section>
+      <section className="section archive-section" id="repertorio"><div className="wrap"><div className="section-heading"><div><p className="eyebrow">04 / Repertório completo</p><h2>Mais projetos.<br/><em>Outras formas de resolver.</em></h2></div><p>Os 14 projetos originais estão preservados. Abra cada ficha para ver a abordagem e os campos que faltam para documentar o caso.</p></div><div className="filter-row" aria-label="Filtrar projetos">{categories.map(c=><button key={c} aria-pressed={filter === c} onClick={()=>setFilter(c)}>{c === 'Todos' ? c : c === 'DADOS & BI' ? 'Dados e BI' : c === 'IA & AUTOMAÇÃO' ? 'IA e automação' : 'Produtos digitais'}</button>)}<span role="status" aria-live="polite">{archive.length} projetos</span></div><div className="archive-grid">{archive.map(p=><article className="archive-card" key={p.id}><span className="eyebrow">{p.category}</span><h3>{p.name}</h3><p>{p.description}</p><details><summary>Ver ficha do caso <Plus size={16} aria-hidden="true" /></summary><dl className="archive-story">{[['Contexto',p.context],['Problema',p.problem],['Abordagem',p.approach],['Resultado',p.result],['Investimento percebido',p.investment ? `${p.investment} — referência para novo escopo, não valor histórico. ${p.investmentReason}` : p.investmentReason]].map(([k,v])=><div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl><p className="archive-pending">A completar: estágio, período, papel de Alan, evidência autorizada, resultado medido e limites.</p><div className="tags">{p.technologies.map(t=><span key={t}>{t}</span>)}</div></details></article>)}</div></div></section>
+      <section className="contact-section" id="contato"><div className="wrap contact-grid"><div><p className="eyebrow">Vamos falar do seu contexto</p><h2>Qual decisão sua operação<br/>precisa tomar <em>melhor?</em></h2><p>Começamos pelo gargalo, pelas fontes disponíveis e por quem usará a solução. Com isso, o escopo ganha fundamento.</p><ContactLink className="button primary">Conversar com Alan</ContactLink></div><aside><span>PARA UMA PRIMEIRA CONVERSA</span><ul><li>Qual processo está travando?</li><li>Onde estão os dados hoje?</li><li>Quem decide e quem executa?</li><li>Como reconhecer uma boa entrega?</li></ul><a href="mailto:comercial@amconsultoria.tech">comercial@amconsultoria.tech <ArrowUpRight size={16} aria-hidden="true" /></a></aside></div></section>
+    </main><footer className="wrap footer"><a href="#inicio" className="brand">AM<span>CONSULTORIA</span></a><p>© {new Date().getFullYear()} AM Consultoria · Alan Moreira</p><a href="https://github.com/alankardecm/portfolio" target="_blank" rel="noopener noreferrer">Portfólio de referência <ArrowUpRight size={14} aria-hidden="true" /></a></footer>
+  </>;
 }
